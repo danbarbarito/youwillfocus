@@ -27,6 +27,9 @@ def deploy():
         if run("test -d %s" % code_dir).failed:
             run("git clone git@github.com:danielbarbarito/youwillfocus.git %s" % code_dir)
     with cd(code_dir):
-        run("killall youwillfocus")
+        with settings(warn_only=True):
+            kill_running = run("killall youwillfocus")
+        if kill_running.failed:
+            print("Server was not running")
         run("git pull origin master")
         run("go run youwillfocus.go")
