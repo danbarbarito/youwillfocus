@@ -11,21 +11,21 @@ def test():
         abort("Aborting at user request.")
 
 def commit():
-    local("git add -p && git commit")
+    local("git add -A && git commit -m 'Pushed using Fabric'")
 
 def push():
-    local("git push")
+    local("git push origin master")
 
 def prepare_deploy():
-    test()
+    # test()
     commit()
     push()
 
 def deploy():
-    code_dir = '/home/barbz/youwillfocus.com'
+    code_dir = '/home/barbz/youwillfocus'
     with settings(warn_only=True):
         if run("test -d %s" % code_dir).failed:
-            run("git clone user@vcshost:/path/to/repo/.git %s" % code_dir)
+            run("git clone https://github.com/danielbarbarito/youwillfocus.git %s" % code_dir)
     with cd(code_dir):
-        run("git pull")
-        run("touch app.wsgi")
+        run("git pull origin master")
+        run("sudo supervisorctl reload")
