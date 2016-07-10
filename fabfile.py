@@ -3,6 +3,7 @@ from fabric.api import *
 from fabric.contrib.console import confirm
 
 env.hosts = ['107.175.2.186']
+env.path = ['/home/barbz/.gvm/gos/go1.6.2/bin/']
 
 def test():
     with settings(warn_only=True):
