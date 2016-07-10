@@ -12,10 +12,12 @@ def test():
         abort("Aborting at user request.")
 
 def commit():
-    local("git add -A && git commit -m 'Pushed using Fabric'")
+    with settings(warn_only=True):
+        local("git add -A && git commit -m 'Pushed using Fabric'")
 
 def push():
-    local("git push origin master")
+    with settings(warn_only=True):
+        local("git push origin master")
 
 def prepare_deploy():
     commit()
