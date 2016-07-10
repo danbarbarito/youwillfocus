@@ -31,7 +31,5 @@ def deploy():
     with cd(code_dir):
         with settings(warn_only=True):
             kill_running = run("killall youwillfocus")
-        if kill_running.failed:
-            print("Server was not running")
         run("git pull origin master")
-        run("/home/barbz/.gvm/gos/go1.6.2/bin/go run youwillfocus.go")
+        run("/home/barbz/.gvm/gos/go1.6.2/bin/go run youwillfocus.go GOPATH=/home/barbz/.go")
