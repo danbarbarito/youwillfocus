@@ -32,4 +32,4 @@ def deploy():
         with settings(warn_only=True):
             kill_running = run("killall youwillfocus")
         run("git pull origin master")
-        run("GOPATH=/home/barbz/.go /home/barbz/.gvm/gos/go1.6.2/bin/go run youwillfocus.go &")
+        run("GOPATH=/home/barbz/.go /home/barbz/.gvm/gos/go1.6.2/bin/go run youwillfocus.go")
