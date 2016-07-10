@@ -27,5 +27,6 @@ def deploy():
         if run("test -d %s" % code_dir).failed:
             run("git clone git@github.com:danielbarbarito/youwillfocus.git %s" % code_dir)
     with cd(code_dir):
+        run("killall youwillfocus")
         run("git pull origin master")
-        run("sudo supervisorctl reload")
+        run("go run youwillfocus.go")
