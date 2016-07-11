@@ -1,0 +1,29 @@
+body {
+  background-color: #26547C;
+  background-image: url("/static/img/sunnyclouds.jpg");
+  color: #F5FFCE;
+}
+
+.centered {
+  text-align: center;
+}
+
+.get-started.btn {
+  width: 60%;
+  font-size: 22px;
+  line-height: 4;
+}
+
+.lead  {
+  color: #white;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+#front.jumbotron {
+  background-color: #26547C;
+}
+
+.textbox {
+  background-color: rgba(0,0,0,.5);
+  border-radius: 10px;
+}

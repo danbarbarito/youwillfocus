@@ -6,17 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script type="text/javascript" src="/static/js/external/jquery/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="/static/js/external/jquery/jquery-slabtext.min.js"></script>
         <script type="text/javascript" src="/static/js/external/bootstrap/bootstrap.min.js"></script>
+        <script src="//bsh-assets-origin.s3.amazonaws.com/v2/js/optimizationrobot.js"></script>
 
         <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-3.1.1/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-3.1.1/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="/static/css/font-awesome-4.0.3/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="/static/css/app.css">
 
-        <title>Go Web Skeleton</title>
+        <title>You Will Focus</title>
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid">
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -26,19 +28,14 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav navbar-right">
                         <li class="{{if eq .Title "home"}}active{{end}}"><a href="/">Home</a></li>
                         <li class="{{if eq .Title "user_home"}}active{{end}}"><a href="/user">User</a></li>
                     </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Blank</a></li>
-                        <li><a target="_blank" href="https://github.com/jadekler/youwillfocus">Site Code</a></li>
-                    </ul>
                 </div>
             </nav>
-
-            {{template "body" .}}
         </div>
+        {{template "body" .}}
     </body>
 </html>
 
