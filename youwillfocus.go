@@ -9,7 +9,8 @@ import (
 
 	"youwillfocus/app/common"
 	"youwillfocus/app/home"
-	"youwillfocus/app/user"
+	_ "youwillfocus/app/user"
+	"youwillfocus/app/about"
 
 	"github.com/golang/glog"
 	"github.com/gorilla/mux"
@@ -23,10 +24,11 @@ func main() {
 	http.Handle("/", httpInterceptor(router))
 
 	router.HandleFunc("/", home.GetHomePage).Methods("GET")
-	router.HandleFunc("/user{_:/?}", user.GetHomePage).Methods("GET")
+	router.HandleFunc("/about", about.GetHomePage).Methods("GET")
+	// router.HandleFunc("/user{_:/?}", user.GetHomePage).Methods("GET")
 
-	router.HandleFunc("/user/view/{id:[0-9]+}", user.GetViewPage).Methods("GET")
-	router.HandleFunc("/user/{id:[0-9]+}", user.GetViewPage).Methods("GET")
+	// router.HandleFunc("/user/view/{id:[0-9]+}", user.GetViewPage).Methods("GET")
+	// router.HandleFunc("/user/{id:[0-9]+}", user.GetViewPage).Methods("GET")
 
 	fileServer := http.StripPrefix("/static/", http.FileServer(http.Dir("static")))
 	http.Handle("/static/", fileServer)

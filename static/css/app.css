@@ -1,6 +1,6 @@
 body {
   background-color: #26547C;
-  background-image: url("/static/img/sunnyclouds.jpg");
+  background-image: url("/static/img/pattern.png");
   color: #F5FFCE;
 }
 
@@ -8,22 +8,53 @@ body {
   text-align: center;
 }
 
-.get-started.btn {
-  width: 60%;
+.noise.btn {
+  width: 100%;
   font-size: 22px;
-  line-height: 4;
+  line-height: 2;
+  margin-bottom: 40px;
+  border-color: transparent !important;
+}
+
+#music {
+  background-color: #7f457e;
+}
+
+#music:hover {
+  background-color: #5f457e;
+}
+
+#rain {
+  background-color: #012250;
+}
+
+#rain:hover {
+  background-color: #000b50;
+}
+
+#white-noise {
+  background-color: #00af12;
+}
+
+#white-noise:hover {
+  background-color: #00df12;
 }
 
 .lead  {
-  color: #white;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  color: white;
+  /* font-weight: bold; */
 }
 
-#front.jumbotron {
+.inverted-pattern {
   background-color: #26547C;
+  background-image: url("/static/img/pattern2.png");
 }
 
 .textbox {
   background-color: rgba(0,0,0,.5);
   border-radius: 10px;
+}
+
+#btn-description {
+  font-size: 10px;
 }
