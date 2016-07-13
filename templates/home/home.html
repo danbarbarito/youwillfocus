@@ -2,29 +2,40 @@
 <section class="featured">
     <div class="container">
         <div id="front" class="jumbotron inverted-pattern">
-            <!-- <div class="row centered">
-                 <div class="intro">
-                 <h1 class="lead">
-                 You <b>will</b> focus. You <b>will</b> relax. You <b>will</b> be productive.
-                 </h1>
-                 </div>
-                 </div> -->
 
-        <div class="row">
+            <div class="row">
 
-            <div class="col-xs-4 centered">
-                <a href='#' id="music" class='btn btn-md btn-primary noise'><i class="icomoon icon-music"></i><br/><p id="btn-description">Music</p></a>
+                <div class="col-xs-4 centered">
+                    <a href='#' id="music" class='btn btn-md btn-primary noise'><i class="icomoon icon-music"></i><br/><p id="btn-description">Music</p></a>
+                    <audio id="music" src="/static/audio/music/chaconne.mp3"></audio>
+                    <div class="volume-info">
+                        Volume: <span class="current-volume" id="music"></span>/10
+                    </div>
+                    <a id="music-vol" class="volume-decrease btn btn-sm"><i class="icomoon icon-volume-decrease"></i></a>
+                    <a id="music-vol" class="volume-increase btn btn-sm"><i class="icomoon icon-volume-increase"></i></a>
+                </div>
+
+                <div class="col-xs-4 centered">
+                    <a href='#' id="rain" class='btn btn-md btn-primary noise'><i class="icomoon icon-droplet"></i><br/><p id="btn-description">Rain</p></a>
+                    <audio loop id="rain" src="/static/audio/sounds/rain/rain-01.mp3"></audio>
+                    <div class="volume-info">
+                        Volume: <span class="current-volume" id="rain"></span>/10
+                    </div>
+                    <a id="rain-vol" class="volume-decrease btn btn-sm"><i class="icomoon icon-volume-decrease"></i></a>
+                    <a id="rain-vol" class="volume-increase btn btn-sm"><i class="icomoon icon-volume-increase"></i></a>
+                </div>
+
+                <div class="col-xs-4 centered">
+                    <a href='#' id="white-noise" class='btn btn-md btn-primary noise'><i class="icomoon icon-feed"></i><br/><p id="btn-description">Binaural Beats</p></a>
+                    <audio id="white-noise" src="/static/audio/sounds/white-noise/white-noise-01.mp3"></audio>
+                    <div class="volume-info">
+                        Volume: <span class="current-volume" id="white-noise"></span>/10
+                    </div>
+                    <a id="white-noise-vol" class="volume-decrease btn btn-sm"><i class="icomoon icon-volume-decrease"></i></a>
+                    <a id="white-noise-vol" class="volume-increase btn btn-sm"><i class="icomoon icon-volume-increase"></i></a>
+                </div>
             </div>
 
-            <div class="col-xs-4 centered">
-                <a href='#' id="rain" class='btn btn-md btn-primary noise'><i class="icomoon icon-droplet"></i><br/><p id="btn-description">Rain</p></a>
-            </div>
-
-            <div class="col-xs-4 centered">
-                <a href='#' id="white-noise" class='btn btn-md btn-primary noise'><i class="icomoon icon-feed"></i><br/><p id="btn-description">White Noise</p></a>
-            </div>
-
-        </div>
         </div>
     </div>
 </section>

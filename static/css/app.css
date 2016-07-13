@@ -16,27 +16,27 @@ body {
   border-color: transparent !important;
 }
 
-#music {
+.btn#music {
   background-color: #7f457e;
 }
 
-#music:hover {
+.btn#music:hover {
   background-color: #5f457e;
 }
 
-#rain {
+.btn#rain {
   background-color: #012250;
 }
 
-#rain:hover {
+.btn#rain:hover {
   background-color: #000b50;
 }
 
-#white-noise {
+.btn#white-noise {
   background-color: #00af12;
 }
 
-#white-noise:hover {
+.btn#white-noise:hover {
   background-color: #00df12;
 }
 
